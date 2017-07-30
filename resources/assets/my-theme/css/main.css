@@ -1,0 +1,28 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+.debug_show {
+  margin-bottom: 2em;
+}
+
+.debug_show span {
+  display: block;
+  margin-bottom: .5em;
+  font-size: 120%;
+  font-weight: bold;
+}
+
+.debug_show pre {
+  max-height: 600px;
+  overflow: auto;
+  font-size: 75%;
+  line-height: 180%;
+}

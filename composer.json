@@ -1,0 +1,53 @@
+{
+  "name": "minimal/framework",
+  "description": "The Minimal Framework.",
+  "keywords": [
+    "framework",
+    "minimal",
+    "mvc"
+  ],
+  "license": "MIT",
+  "type": "project",
+  "authors": [
+    {
+      "name": "Julien Duseyau",
+      "email": "julien.duseyau@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=7.0.0",
+    "maduser/minimal": "v0.5.21",
+    "phpmailer/phpmailer": "^5.2",
+    "phpoffice/phpexcel": "^1.8",
+    "laravelcollective/html": "^5.4",
+    "symfony/http-kernel": "^3.3",
+    "ellislab/codeigniter": "^3.1",
+    "baum/baum": "^1.1"
+  },
+  "require-dev": {
+    "fzaninotto/faker": "^1.6",
+    "symfony/var-dumper": "3.4.x-dev",
+    "kint-php/kint": "^2.1"
+  },
+  "extra": {
+    "kint": {
+      "disable-helper-functions": true
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "app"
+    },
+    "files": [
+      "helpers/helpers.php"
+    ]
+  },
+  "scripts": {
+    "post-create-project-cmd": [
+      "php -r \"rename('config/_development.php', 'config/development.php');\"",
+      "php -r \"rename('config/_production.php', 'config/production.php');\"",
+      "php -r \"rename('config/_environment.php', 'config/environment.php');\""
+    ]
+  }
+}
